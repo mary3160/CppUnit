@@ -27,12 +27,12 @@ class CPPUNIT_API Test
 public:
   virtual ~Test() {};
 
-  /*! \brief Run the test, collecting results.
+  /*! \brief Run the test, collecting results.运行测试内容，TestResult得到结果
    */
   virtual void run( TestResult *result ) =0;
 
   /*! \brief Return the number of test cases invoked by run().
-   *
+   * 返回TestCase个数
    * The base unit of testing is the class TestCase.  This
    * method returns the number of TestCase objects invoked by
    * the run() method.
@@ -40,11 +40,12 @@ public:
   virtual int countTestCases () const =0;
 
   /*! \brief Returns the number of direct child of the test.
+  返回child个数
    */
   virtual int getChildTestCount() const =0;
 
   /*! \brief Returns the child test of the specified index.
-   *
+   *返回index指向的child test
    * This method test if the index is valid, then call doGetChildTestAt() if 
    * the index is valid. Otherwise std::out_of_range exception is thrown.
    *
@@ -57,7 +58,7 @@ public:
   virtual Test *getChildTestAt( int index ) const;
 
   /*! \brief Returns the test name.
-   * 
+   * 返回测试名称
    * Each test has a name.  This name may be used to find the
    * test in a suite or registry of tests.
    */
