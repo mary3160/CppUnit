@@ -24,6 +24,7 @@ class CPPUNIT_API SynchronizedObject
 public:
   /*! \brief Abstract synchronization object (mutex)
    */
+  // 互斥锁
   class SynchronizationObject
   {
     public:
@@ -44,6 +45,7 @@ public:
 protected:
   /*! \brief Locks a synchronization object in the current scope.
    */
+  //临界区
   class ExclusiveZone
   {
     SynchronizationObject *m_syncObject;
