@@ -15,7 +15,7 @@ class TestResult;
 
 /*! \brief Listener for test progress and result.
  * \ingroup TrackingTestExecution
- *
+ * 观察者模式：从TestResult处得到信息
  * Implementing the Observer pattern a TestListener may be registered
  * to a TestResult to obtain information on the testing progress. Use
  * specialized sub classes of TestListener for text output
