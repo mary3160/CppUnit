@@ -33,11 +33,11 @@ class TestListener;
  *
  * A single instance of this class is used when running the test. It is usually
  * created by the test runner (TestRunner).
- *
+ * 观察者模式
  * This class shouldn't have to be inherited from. Use a TestListener
  * or one of its subclasses to be informed of the ongoing tests.
  * Use a Outputter to receive a test summary once it has finished
- *
+ * 多线程
  * TestResult supplies a template method 'setSynchronizationObject()'
  * so that subclasses can provide mutual exclusion in the face of multiple
  * threads.  This can be useful when tests execute in one thread and
